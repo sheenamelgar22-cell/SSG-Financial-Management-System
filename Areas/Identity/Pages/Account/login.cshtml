@@ -1,0 +1,46 @@
+@page
+
+
+<div class="auth-container">
+
+    <div class="auth-left">
+        <img src="~/images/logo.png" alt="Logo" />
+    </div>
+
+    <div class="auth-right">
+        <h2>Sign in</h2>
+
+        <form method="post">
+            <div asp-validation-summary="All" class="text-danger"></div>
+
+            <div class="role-switch">
+                <button type="button" class="active">Treasurer</button>
+                <button type="button">Admin</button>
+            </div>
+
+            <div class="input-group">
+                <input asp-for="Input.Email" placeholder=" " required />
+                <label>Email</label>
+            </div>
+
+            <div class="input-group">
+                <input asp-for="Input.Password" type="password" placeholder=" " required />
+                <label>Password</label>
+            </div>
+
+            <a href="#" class="forgot">Forgot password?</a>
+
+            <button type="submit" class="btn-login">Sign in</button>
+
+            <p class="signup-text">
+                Don't have an account?
+                <a asp-page="./Register">Sign up</a>
+            </p>
+        </form>
+    </div>
+
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

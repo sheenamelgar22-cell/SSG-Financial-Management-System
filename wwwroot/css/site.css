@@ -1,0 +1,174 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+.form-floating > .form-control-plaintext::placeholder, .form-floating > .form-control::placeholder {
+  color: var(--bs-secondary-color);
+  text-align: end;
+}
+
+.form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
+  text-align: start;
+}
+
+
+/* Custom Styles for login pages*/
+.auth-container {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #f8f4f4;
+}
+
+/* MAIN CONTAINER */
+.auth-container {
+    display: flex;
+    height: 100vh;
+}
+
+/* LEFT SIDE */
+.auth-left {
+    width: 50%;
+    background: linear-gradient(rgba(34,197,94,0.6), rgba(34,197,94,0.6)),
+                url('/images/bg.jpg') center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.auth-left img {
+    width: 250px;
+    opacity: 0.9;
+}
+
+/* RIGHT SIDE */
+.auth-right {
+    width: 50%;
+    background: #f8f4f4;
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.auth-right h2 {
+    margin-bottom: 20px;
+}
+
+/* ROLE SWITCH */
+.role-switch {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.role-switch button {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background: white;
+    cursor: pointer;
+}
+
+.role-switch .active {
+    background: #22c55e;
+    color: white;
+}
+
+/* INPUTS */
+.form-control {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+/* BUTTON */
+.btn-login {
+    width: 100%;
+    padding: 12px;
+    background: #22c55e;
+    border: none;
+    color: white;
+    border-radius: 6px;
+    margin-top: 10px;
+}
+
+/* LINKS */
+.forgot {
+    font-size: 12px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.signup-text {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+
+/* ========================= */
+/* FLOATING INPUT DESIGN */
+/* ========================= */
+.input-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+/* INPUT */
+.input-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    outline: none;
+    font-size: 14px;
+    background: transparent;
+}
+
+/* LABEL */
+.input-group label {
+    position: absolute;
+    left: 12px;
+    top: 12px;
+    color: #888;
+    font-size: 14px;
+    padding: 0 5px;
+    transition: 0.3s ease;
+    pointer-events: none;
+    background: #f8f4f4;
+}
+
+/* ANIMATION (focus or typed) */
+.input-group input:focus + label,
+.input-group input:not(:placeholder-shown) + label {
+    top: -8px;
+    font-size: 12px;
+    color: #22c55e;
+}
+/* GREEN BORDER ON FOCUS */
+.input-group input:focus {
+    border-color: #22c55e;
+}
+
+.input-group input {
+    transition: border-color 0.3s ease;
+}
