@@ -1,0 +1,32 @@
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.RazorPages;
+
+public class RegisterModel : PageModel[b-h8cdte2317]
+{
+    [BindProperty]
+    public InputModel Input { get; set; }
+
+    public class InputModel[b-h8cdte2317]
+    {
+        public string Email { get; set; }
+        public string Password[b-h8cdte2317] { get; set; }
+        public string ConfirmPassword[b-h8cdte2317] { get; set; }
+    }
+
+    public void OnGet()[b-h8cdte2317]
+    {
+    }
+
+    public IActionResult OnPost()[b-h8cdte2317]
+    {
+        if (Input.Password != Input.ConfirmPassword)
+        {
+            ModelState.AddModelError("", "Passwords do not match");
+            return Page();
+        }
+
+        // TODO: Save user to database
+
+        return RedirectToPage("Login");[b-h8cdte2317]
+    }
+}
