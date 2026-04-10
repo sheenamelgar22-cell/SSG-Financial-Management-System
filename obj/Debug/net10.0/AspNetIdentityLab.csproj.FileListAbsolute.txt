@@ -202,7 +202,6 @@ C:\Users\bossf\SSG Finacial Management System\AspNetIdentityLab\obj\Debug\net10.
 C:\Users\bossf\SSG Finacial Management System\AspNetIdentityLab\obj\Debug\net10.0\compressed\nezrqnk58p-{0}-muycvpuwrr-muycvpuwrr.gz
 C:\Users\bossf\SSG Finacial Management System\AspNetIdentityLab\obj\Debug\net10.0\compressed\v0zgfp0y55-{0}-87fc7y1x7t-87fc7y1x7t.gz
 C:\Users\bossf\SSG Finacial Management System\AspNetIdentityLab\obj\Debug\net10.0\compressed\yfc7ypekbg-{0}-mlv21k5csn-mlv21k5csn.gz
-C:\Users\bossf\SSG Finacial Management System\AspNetIdentityLab\obj\Debug\net10.0\compressed\dt33psnsyt-{0}-nkrv41z0gf-nkrv41z0gf.gz
 C:\Users\bossf\SSG Finacial Management System\AspNetIdentityLab\obj\Debug\net10.0\compressed\gekg166ppv-{0}-61n19gt1b8-61n19gt1b8.gz
 C:\Users\bossf\SSG Finacial Management System\AspNetIdentityLab\obj\Debug\net10.0\compressed\bhha69j5sc-{0}-f4ks27ixvs-f4ks27ixvs.gz
 C:\Users\bossf\SSG Finacial Management System\AspNetIdentityLab\obj\Debug\net10.0\compressed\qhg3j0sq4b-{0}-bqjiyaj88i-bqjiyaj88i.gz
@@ -280,3 +279,4 @@ C:\Users\bossf\SSG Finacial Management System\AspNetIdentityLab\bin\Debug\net10.
 C:\Users\bossf\SSG Finacial Management System\AspNetIdentityLab\bin\Debug\net10.0\AspNetIdentityLab.pdb
 C:\Users\bossf\SSG Finacial Management System\AspNetIdentityLab\obj\Debug\net10.0\AspNetIdentityLab.genruntimeconfig.cache
 C:\Users\bossf\SSG Finacial Management System\AspNetIdentityLab\obj\Debug\net10.0\ref\AspNetIdentityLab.dll
+C:\Users\bossf\SSG Finacial Management System\AspNetIdentityLab\obj\Debug\net10.0\compressed\dt33psnsyt-{0}-18mgqrzltc-18mgqrzltc.gz
