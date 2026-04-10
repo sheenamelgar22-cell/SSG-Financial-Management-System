@@ -1,0 +1,33 @@
+@page
+@model RegisterStep1Model
+
+<link rel="stylesheet" href="~/css/register.css" />
+
+<div class="auth-container">
+    <div class="form-box">
+        <h2>Account Registration</h2>
+
+        <form method="post">
+            <label>Course:</label>
+            <select asp-for="Input.Course">
+                <option value="">Please Select</option>
+                <option>BSIT</option>
+                <option>BSCS</option>
+            </select>
+
+            <label>Year Level:</label>
+            <select asp-for="Input.YearLevel">
+                <option value="">Please Select</option>
+                <option>1st Year</option>
+                <option>2nd Year</option>
+                <option>3rd Year</option>
+                <option>4th Year</option>
+            </select>
+
+            <label>Section:</label>
+            <input asp-for="Input.Section" placeholder="Enter here" />
+
+            <button type="submit">Next</button>
+        </form>
+    </div>
+</div>

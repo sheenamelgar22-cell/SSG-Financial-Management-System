@@ -1,0 +1,23 @@
+@page
+@model RegisterStep2Model
+
+<link rel="stylesheet" href="~/css/register.css" />
+
+<div class="auth-container">
+    <div class="form-box">
+        <h2>Create Account</h2>
+
+        <form method="post">
+            <label>Student ID:</label>
+            <input asp-for="Input.Email" placeholder="Enter here" />
+
+            <label>Password:</label>
+            <input asp-for="Input.Password" type="password" placeholder="Enter here" />
+
+            <label>Re-type Password:</label>
+            <input asp-for="Input.ConfirmPassword" type="password" placeholder="Enter here" />
+
+            <button type="submit">Register</button>
+        </form>
+    </div>
+</div>

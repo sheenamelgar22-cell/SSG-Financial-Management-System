@@ -34,8 +34,12 @@ build_property.EnableCodeStyleSeverity =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxsb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/bossf/SSG Finacial Management System/AspNetIdentityLab/Areas/Identity/Pages/Account/register.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxyZWdpc3Rlci5jc2h0bWw=
+[c:/Users/bossf/SSG Finacial Management System/AspNetIdentityLab/Areas/Identity/Pages/Account/register1.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxyZWdpc3RlcjEuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/bossf/SSG Finacial Management System/AspNetIdentityLab/Areas/Identity/Pages/Account/register2.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxyZWdpc3RlcjIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [c:/Users/bossf/SSG Finacial Management System/AspNetIdentityLab/Areas/Identity/Pages/_ViewStart.cshtml]

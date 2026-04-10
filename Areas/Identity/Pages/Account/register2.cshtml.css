@@ -1,0 +1,39 @@
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.RazorPages;
+
+public class RegisterStep2Model : PageModel
+{
+    [BindProperty]
+    public InputModel Input { get; set; }
+
+    public string Course { get; set; }
+    public string YearLevel { get; set; }
+    public string Section { get; set; }
+
+    public class InputModel
+    {
+        public string Email { get; set; }
+        public string Password { get; set; }
+        public string ConfirmPassword { get; set; }
+    }
+
+    public void OnGet()
+    {
+        // Retrieve data from Step 1
+        Course = TempData["Course"]?.ToString();
+        YearLevel = TempData["YearLevel"]?.ToString();
+        Section = TempData["Section"]?.ToString();
+    }
+
+    public IActionResult OnPost()
+    {
+        // Here you combine Step 1 + Step 2 data
+        var course = TempData["Course"];
+        var year = TempData["YearLevel"];
+        var section = TempData["Section"];
+
+        // TODO: Save to database
+
+        return RedirectToPage("Login");
+    }
+}
