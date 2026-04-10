@@ -275,3 +275,8 @@ C:\Users\bossf\SSG Finacial Management System\AspNetIdentityLab\obj\Debug\net10.
 C:\Users\bossf\SSG Finacial Management System\AspNetIdentityLab\obj\Debug\net10.0\AspNetIdentityLab.dll
 C:\Users\bossf\SSG Finacial Management System\AspNetIdentityLab\obj\Debug\net10.0\refint\AspNetIdentityLab.dll
 C:\Users\bossf\SSG Finacial Management System\AspNetIdentityLab\obj\Debug\net10.0\AspNetIdentityLab.pdb
+C:\Users\bossf\SSG Finacial Management System\AspNetIdentityLab\bin\Debug\net10.0\AspNetIdentityLab.deps.json
+C:\Users\bossf\SSG Finacial Management System\AspNetIdentityLab\bin\Debug\net10.0\AspNetIdentityLab.runtimeconfig.json
+C:\Users\bossf\SSG Finacial Management System\AspNetIdentityLab\bin\Debug\net10.0\AspNetIdentityLab.pdb
+C:\Users\bossf\SSG Finacial Management System\AspNetIdentityLab\obj\Debug\net10.0\AspNetIdentityLab.genruntimeconfig.cache
+C:\Users\bossf\SSG Finacial Management System\AspNetIdentityLab\obj\Debug\net10.0\ref\AspNetIdentityLab.dll

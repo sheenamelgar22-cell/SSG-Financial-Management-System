@@ -172,3 +172,114 @@ body {
 .input-group input {
     transition: border-color 0.3s ease;
 }
+
+
+
+/*phone*/
+
+/* CENTER LAYOUT */
+.auth-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* PHONE FRAME (DESKTOP DEFAULT) */
+.phone-frame {
+    width: 350px;
+    height: 650px;
+    background: black;
+    border-radius: 30px;
+    padding: 15px;
+}
+
+/* GREEN CARD */
+.form-card {
+    background: #34a853;
+    height: 100%;
+    border-radius: 25px;
+    text-align: center;
+    padding: 30px 20px;
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* LOGO */
+.logo {
+    width: 80px;
+    margin: 0 auto 10px;
+}
+
+/* TITLE */
+.form-card h2 {
+    margin-bottom: 20px;
+}
+
+/* INPUTS */
+.form-card input {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+/* BUTTON */
+.form-card button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 15px;
+    background-color: #2c7a43;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.form-card button:hover {
+    background-color: #256d3a;
+}
+
+/* ----------------------------- */
+/* 📱 MOBILE RESPONSIVE */
+/* ----------------------------- */
+@media (max-width: 768px) {
+
+    body {
+        background: #34a853;
+    }
+
+    .auth-container {
+        padding: 0;
+    }
+
+    .phone-frame {
+        width: 100%;
+        height: 100vh;
+        border-radius: 0;
+        padding: 0;
+        background: none;
+    }
+
+    .form-card {
+        border-radius: 0;
+        height: 100%;
+        padding: 40px 20px;
+    }
+
+    .logo {
+        width: 70px;
+    }
+
+    .form-card h2 {
+        font-size: 20px;
+    }
+}
