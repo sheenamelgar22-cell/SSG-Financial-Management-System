@@ -15,11 +15,10 @@ public class RegisterStep1Model : PageModel
 
     public IActionResult OnPost()
     {
-        // Pass data to Step 2 via TempData
         TempData["Course"] = Input.Course;
         TempData["YearLevel"] = Input.YearLevel;
         TempData["Section"] = Input.Section;
 
-        return RedirectToPage("RegisterStep2");
+        return RedirectToPage("register2");
     }
 }
