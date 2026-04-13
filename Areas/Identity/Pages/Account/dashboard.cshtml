@@ -1,0 +1,308 @@
+@page
+@model RegisterStep2Model
+@{
+    ViewData["Title"] = "Dashboard";
+}
+<link rel="stylesheet" href="~/css/dashboard.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SSG Financial Management System</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+  
+<body>
+
+  <!-- ========== SIDEBAR ========== -->
+  <aside class="sidebar">
+    <div class="sidebar-logo">
+      <span>
+        <div class="logo-icon">S</div>
+        <span>SSG Financial</span>
+      </span>
+    </div>
+
+    <nav class="nav">
+      <div class="nav-item active" onclick="setActive(this)">
+        <svg fill="currentColor" viewBox="0 0 20 20">
+          <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zm0 6a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1v-2zm0 6a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1v-2z"/>
+        </svg>
+        <span>Dashboard</span>
+      </div>
+
+      <div class="nav-item" onclick="setActive(this)">
+        <svg fill="currentColor" viewBox="0 0 20 20">
+          <path d="M4 4a2 2 0 00-2 2v8a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2H4zm2 5a1 1 0 011-1h6a1 1 0 110 2H7a1 1 0 01-1-1z"/>
+        </svg>
+        <span>Transactions</span>
+      </div>
+
+      <div class="nav-item" onclick="setActive(this)">
+        <svg fill="currentColor" viewBox="0 0 20 20">
+          <path fill-rule="evenodd" d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 4a1 1 0 000 2h6a1 1 0 100-2H7zm-1 4a1 1 0 011-1h6a1 1 0 110 2H7a1 1 0 01-1-1z" clip-rule="evenodd"/>
+        </svg>
+        <span>Reports</span>
+      </div>
+
+      <div class="nav-item" onclick="setActive(this)">
+        <svg fill="currentColor" viewBox="0 0 20 20">
+          <path fill-rule="evenodd" d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd"/>
+        </svg>
+        <span>Settings</span>
+      </div>
+    </nav>
+
+    <div class="sidebar-footer">
+      <div class="user-info">
+        <div class="avatar">MC</div>
+        <div>
+          <div class="user-name">Ms. Cadungog</div>
+          <div class="user-role">Admin</div>
+        </div>
+      </div>
+      <button class="signout-btn">
+        <svg width="14" height="14" fill="currentColor" viewBox="0 0 20 20">
+          <path fill-rule="evenodd" d="M3 3a1 1 0 00-1 1v12a1 1 0 001 1h7a1 1 0 100-2H4V5h6a1 1 0 100-2H3zm10.293 4.293a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 01-1.414-1.414L14.586 11H9a1 1 0 110-2h5.586l-1.293-1.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+        </svg>
+        <span>Sign Out</span>
+      </button>
+    </div>
+  </aside>
+
+  <!-- ========== MAIN ========== -->
+  <div class="main">
+
+    <!-- Top Bar -->
+    <header class="topbar">
+      <div class="logo-icon" style="background: rgba(255,255,255,0.25);">S</div>
+      <span class="topbar-title">SSG Financial Management System</span>
+      <div class="topbar-icons">
+        <div class="topbar-icon" title="Notifications">&#128276;</div>
+        <div class="topbar-icon" title="Settings">&#9881;</div>
+      </div>
+    </header>
+
+    <!-- Page Content -->
+    <div class="content">
+      <div class="page-title">
+        Admin's Account &nbsp;&rsaquo;&nbsp; <span class="active-page">Dashboard</span>
+      </div>
+
+      <!-- Stat Cards -->
+      <div class="stat-cards">
+        <div class="stat-card">
+          <div class="stat-icon blue">&#128178;</div>
+          <div>
+            <div class="stat-value">&#8369; 20,000.00</div>
+            <div class="stat-label">Total Funds Collected</div>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon orange">&#128200;</div>
+          <div>
+            <div class="stat-value">&#8369; 20,000.00</div>
+            <div class="stat-label">Total Expenses</div>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon yellow">&#128203;</div>
+          <div>
+            <div class="stat-value">98</div>
+            <div class="stat-label">Account Requests</div>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon green">&#128101;</div>
+          <div>
+            <div class="stat-value">240</div>
+            <div class="stat-label">Registered Students</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Two-Column: Chart + Students -->
+      <div class="two-col">
+
+        <!-- Financial Overview Chart -->
+        <div class="card">
+          <div class="card-title">Financial Overview</div>
+          <div class="legend">
+            <div class="legend-item"><div class="dot blue"></div> Monthly Collected Funds</div>
+            <div class="legend-item"><div class="dot red"></div> Monthly Expenses</div>
+          </div>
+          <canvas id="finChart" height="180"></canvas>
+        </div>
+
+        <!-- Students Profile -->
+        <div class="card">
+          <div class="card-title">Students Profile</div>
+          <div class="search-bar">
+            <svg width="14" height="14" fill="#9ca3af" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"/>
+            </svg>
+            <input type="text" id="studentSearch" placeholder="Search by ID or name" oninput="filterStudents()" />
+          </div>
+          <table class="profile-table">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Course</th>
+                <th>Year &amp; Section</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody id="studentBody"></tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Requested Accounts -->
+      <div class="full-card">
+        <div class="card-title">Requested Accounts</div>
+        <div class="search-bar" style="max-width: 280px;">
+          <svg width="14" height="14" fill="#9ca3af" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"/>
+          </svg>
+          <input type="text" id="reqSearch" placeholder="Search by ID or name" oninput="filterRequests()" />
+        </div>
+        <table class="req-table">
+          <thead>
+            <tr>
+              <th>Student ID</th>
+              <th>Name</th>
+              <th>Course</th>
+              <th>Year &amp; Section</th>
+              <th>Date Requested</th>
+              <th>Status</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody id="reqBody"></tbody>
+        </table>
+      </div>
+
+    </div><!-- /content -->
+  </div><!-- /main -->
+
+  <script>
+    /* ========== NAV ACTIVE STATE ========== */
+    function setActive(el) {
+      document.querySelectorAll('.nav-item').forEach(i => i.classList.remove('active'));
+      el.classList.add('active');
+    }
+
+    /* ========== CHART ========== */
+    const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+    const collected = [12000,15000,13500,18000,16000,20000,17500,19000,21000,18500,22000,20000];
+    const expenses  = [8000,10000,9500,12000,11000,14000,13000,15000,16000,14500,17000,15000];
+
+    const ctx = document.getElementById('finChart').getContext('2d');
+    new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: months,
+        datasets: [
+          {
+            label: 'Monthly Collected Funds',
+            data: collected,
+            borderColor: '#3b82f6',
+            backgroundColor: 'rgba(59,130,246,0.07)',
+            tension: 0.4,
+            pointRadius: 3,
+            pointBackgroundColor: '#3b82f6',
+            fill: true
+          },
+          {
+            label: 'Monthly Expenses',
+            data: expenses,
+            borderColor: '#ef4444',
+            backgroundColor: 'rgba(239,68,68,0.07)',
+            tension: 0.4,
+            pointRadius: 3,
+            pointBackgroundColor: '#ef4444',
+            fill: true
+          }
+        ]
+      },
+      options: {
+        responsive: true,
+        plugins: { legend: { display: false } },
+        scales: {
+          x: {
+            grid: { display: false },
+            ticks: { font: { size: 10 }, color: '#9ca3af' }
+          },
+          y: {
+            grid: { color: 'rgba(0,0,0,0.04)' },
+            ticks: {
+              callback: v => '₱' + v.toLocaleString(),
+              font: { size: 10 },
+              color: '#9ca3af'
+            }
+          }
+        }
+      }
+    });
+
+    /* ========== STUDENT DATA ========== */
+    const students = [
+      { name: 'ARIAS, RONALD C.',   course: 'BSIT', cls: 'bsit', section: '2 - A', action: 'view' },
+      { name: 'MELGAR, SHERINA B.', course: 'BSIT', cls: 'bsit', section: '2 - A', action: 'add'  },
+      { name: 'SANTOS, CARLO M.',   course: 'BSED', cls: 'bsed', section: '3 - B', action: 'view' },
+      { name: 'DELA CRUZ, ANA P.',  course: 'BSIT', cls: 'bsit', section: '1 - C', action: 'add'  },
+      { name: 'RAMOS, JOSE A.',     course: 'BSBA', cls: 'bsba', section: '3 - A', action: 'view' },
+    ];
+
+    function renderStudents(data) {
+      document.getElementById('studentBody').innerHTML = data.map(r => `
+        <tr>
+          <td>${r.name}</td>
+          <td><span class="badge ${r.cls}">${r.course}</span></td>
+          <td>${r.section}</td>
+          <td><button class="action-btn ${r.action}">${r.action === 'view' ? 'View' : 'Add'}</button></td>
+        </tr>
+      `).join('');
+    }
+
+    function filterStudents() {
+      const q = document.getElementById('studentSearch').value.toLowerCase();
+      renderStudents(students.filter(r =>
+        r.name.toLowerCase().includes(q) || r.course.toLowerCase().includes(q)
+      ));
+    }
+
+    renderStudents(students);
+
+    /* ========== REQUESTS DATA ========== */
+    const requests = [
+      { id: '724211', name: 'FERRER, JANREY',   course: 'BSIT', section: '2 - A', date: '4-1-2026', status: 'pending'  },
+      { id: '724212', name: 'GARCIA, MARIA',    course: 'BSED', section: '1 - B', date: '4-2-2026', status: 'approved' },
+      { id: '724213', name: 'RAMOS, JOSE A.',   course: 'BSIT', section: '3 - C', date: '4-3-2026', status: 'pending'  },
+      { id: '724214', name: 'BAUTISTA, LORNA',  course: 'BSBA', section: '2 - D', date: '4-4-2026', status: 'rejected' },
+      { id: '724215', name: 'TORRES, KEVIN C.', course: 'BSIT', section: '4 - A', date: '4-5-2026', status: 'approved' },
+      { id: '724216', name: 'LIM, PATRICIA O.', course: 'BSED', section: '1 - A', date: '4-6-2026', status: 'pending'  },
+    ];
+
+    function renderRequests(data) {
+      document.getElementById('reqBody').innerHTML = data.map(r => `
+        <tr>
+          <td>${r.id}</td>
+          <td>${r.name}</td>
+          <td>${r.course}</td>
+          <td>${r.section}</td>
+          <td>${r.date}</td>
+          <td><span class="status-badge ${r.status}">${r.status.charAt(0).toUpperCase() + r.status.slice(1)}</span></td>
+          <td><span class="three-dots" title="More actions">&#x22EF;</span></td>
+        </tr>
+      `).join('');
+    }
+
+    function filterRequests() {
+      const q = document.getElementById('reqSearch').value.toLowerCase();
+      renderRequests(requests.filter(r =>
+        r.id.includes(q) || r.name.toLowerCase().includes(q)
+      ));
+    }
+
+    renderRequests(requests);
+  </script>
+</body>
+</html>
