@@ -4,7 +4,6 @@ using AspNetIdentityLab.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// ✅ ADD SERVICES FIRST (BEFORE BUILD)
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection") 
     ?? throw new InvalidOperationException("Connection string 'DefaultConnection' not found.");
 
@@ -14,16 +13,14 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
 builder.Services.AddDefaultIdentity<IdentityUser>(options => 
-    options.SignIn.RequireConfirmedAccount = false) // 🔥 set to false for testing
+    options.SignIn.RequireConfirmedAccount = false)
     .AddEntityFrameworkStores<ApplicationDbContext>();
 
 builder.Services.AddControllersWithViews();
-builder.Services.AddRazorPages(); // ✅ ONLY ONCE, AND BEFORE BUILD
+builder.Services.AddRazorPages(); // ✅ Only once
 
-// ✅ BUILD APP
 var app = builder.Build();
 
-// ✅ MIDDLEWARE
 if (app.Environment.IsDevelopment())
 {
     app.UseMigrationsEndPoint();
@@ -34,22 +31,18 @@ else
     app.UseHsts();
 }
 
-app.UseHttpsRedirection();
-app.UseStaticFiles(); // ✅ IMPORTANT (fix for CSS/images)
-
+//app.UseHttpsRedirection();
+app.UseStaticFiles();
 app.UseRouting();
-
-app.UseAuthentication(); // ✅ REQUIRED for Identity
+app.UseAuthentication();
 app.UseAuthorization();
 
-// ✅ ROUTES
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Login}/{id?}");
+    pattern: "{controller=Home}/{action=Index}/{id?}"); // ✅ Fixed
 
 app.MapRazorPages();
 
-// ✅ REDIRECT ROOT → LOGIN
 app.MapGet("/", context =>
 {
     context.Response.Redirect("/Identity/Account/Login");

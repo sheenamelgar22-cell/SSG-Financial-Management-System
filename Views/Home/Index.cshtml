@@ -1,8 +1,26 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Home";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div style="padding: 40px;">
+    <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+        <h1 style="font-size: 2.5rem; margin-bottom: 16px;">
+            Welcome to SSG Financial Management
+        </h1>
+        <p style="font-size: 1.1rem; color: #555; margin-bottom: 32px;">
+            Manage your finances securely and efficiently.
+        </p>
+        <div style="display: flex; gap: 16px; justify-content: center;">
+            <a href="/Identity/Account/Login"
+               style="padding: 12px 28px; background: #0d6efd; color: white;
+                      border-radius: 8px; text-decoration: none; font-weight: bold;">
+                Login
+            </a>
+            <a href="/Identity/Account/Register"
+               style="padding: 12px 28px; background: #198754; color: white;
+                      border-radius: 8px; text-decoration: none; font-weight: bold;">
+                Register
+            </a>
+        </div>
+    </div>
 </div>

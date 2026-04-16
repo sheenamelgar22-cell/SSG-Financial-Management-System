@@ -1,54 +1,60 @@
+@page
+@model AspNetIdentityLab.Areas.Identity.Pages.Account.LoginModel
+@{
+    Layout = null;
+}
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Organizational Fees Tracker</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>SSG Login</title>
 </head>
 <body>
-    <div class="container">
-        <div class="left-panel">
-            <div class="logo">
-                <img src="path/to/your/logo.png" alt="CTU-Ginatilan Logo">
-                <div class="logo-text">
-                    <p class="university-name">CTU - Ginatilan</p>
-                    <p class="government-name">Supreme Student Government</p>
-                </div>
-            </div>
-            <div class="hero-text">
-                <h1>Track your<br>Organizational<br>Fees!</h1>
-                <p>A transparent and real-time system for tracking and managing organizational fees.</p>
-            </div>
-            <div class="copyright">
-                <p>No Copyright</p>
+    <div class="left-panel">
+        <div class="logo">
+            <div class="logo.jpg">g</div>
+            <div class="logo-text">
+                <h2>CTU - Ginatilan</h2>
+                <p>Supreme Student Government</p>
             </div>
         </div>
-        <div class="right-panel">
-            <div class="sign-in-form">
-                <h2>Sign in</h2>
-                <p class="choose-role-text">Please choose your role</p>
-                <div class="role-selection">
-                    <button class="role-button active">Student</button>
-                    <button class="role-button">Treasurer</button>
-                    <button class="role-button">Admin</button>
-                </div>
-                <div class="input-group">
-                    <label for="email">Enter your Email</label>
-                    <input type="email" id="email" placeholder="Enter your Email">
-                </div>
-                <div class="input-group">
-                    <label for="password">Enter your Password</label>
-                    <input type="password" id="password" placeholder="Enter your Password">
-                </div>
-                <p class="forgot-password">Forgot password?</p>
-                <button class="sign-in-button">Sign in</button>
-                <div class="signup-section">
-                    <p>Don't have an account?</p>
-                    <button class="signup-button">Sign up</button>
-                </div>
+        <div>
+            <div class="tagline">Track your Organizational Fees!</div>
+            <p class="subtitle">A transparent and real-time system for tracking and managing organizational fees.</p>
+        </div>
+        <div class="footer">No Copyright</div>
+    </div>
+
+    <div class="right-panel">
+        <div class="form-box">
+            <h2>Sign in</h2>
+            <p>Please choose your role</p>
+
+            <div class="role-tabs">
+                <button class="role-tab active" onclick="setRole('Student', this)">Student</button>
+                <button class="role-tab" onclick="setRole('Treasurer', this)">Treasurer</button>
+                <button class="role-tab" onclick="setRole('Admin', this)">Admin</button>
             </div>
+
+            <form method="post">
+                <input type="hidden" name="Input.Role" id="roleInput" value="Student" />
+                <input asp-for="Input.Email" type="email" placeholder="Enter your Email" />
+                <input asp-for="Input.Password" type="password" placeholder="Enter your Password" />
+                <a href="#" class="forgot">Forgot password?</a>
+                <button type="submit" class="btn-login">Sign in</button>
+                <p class="signup-text">Don't have an <strong>account?</strong></p>
+                <a href="/Identity/Account/Register" class="btn-signup">Sign up</a>
+            </form>
         </div>
     </div>
+
+    <script>
+        function setRole(role, el) {
+            document.getElementById('roleInput').value = role;
+            document.querySelectorAll('.role-tab').forEach(t => t.classList.remove('active'));
+            el.classList.add('active');
+        }
+    </script>
 </body>
 </html>
