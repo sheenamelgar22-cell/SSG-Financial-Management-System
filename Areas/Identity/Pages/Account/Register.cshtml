@@ -1,0 +1,41 @@
+@page
+
+<link rel="stylesheet" href="~/css/auth.css" />
+
+<div class="register-container">
+
+    <!-- STEP 1 -->
+    <div class="card">
+        <h3>Account Registration</h3>
+
+        <select>
+            <option>Please Select Course</option>
+        </select>
+
+        <select>
+            <option>Please Select Year Level</option>
+        </select>
+
+        <input placeholder="Section" />
+
+        <button class="btn-primary">Next</button>
+    </div>
+
+    <!-- STEP 2 -->
+    <div class="card">
+        <h3>Create Account</h3>
+
+        <input placeholder="Student ID" />
+        <input type="password" placeholder="Password" />
+        <input type="password" placeholder="Re-enter Password" />
+
+        <button class="btn-primary">Next</button>
+    </div>
+    <form method="post">
+    <input asp-for="Input.Email" placeholder="Email" />
+    <input asp-for="Input.Password" type="password" placeholder="Password" />
+
+    <button type="submit" class="btn-primary">Register</button>
+</form>
+
+</div>

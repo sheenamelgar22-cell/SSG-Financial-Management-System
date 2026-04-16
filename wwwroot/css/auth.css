@@ -1,0 +1,22 @@
+.auth-left {
+    background: linear-gradient(135deg, #34a853, #2e7d32);
+    border-radius: 20px;
+}
+
+.auth-right {
+    background: #fafafa;
+}
+
+.btn-primary {
+    background: #34a853;
+    transition: 0.3s;
+}
+
+.btn-primary:hover {
+    background: #2e7d32;
+}
+
+input {
+    border: 1px solid #ddd;
+    background: #fff;
+}

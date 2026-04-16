@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AspNetIdentityLab")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+112a93f07c6c7dc4437813f788355eeb329f93ea")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a8616d87c59c0807ca3c26ea863eb1f303dd219c")]
 [assembly: System.Reflection.AssemblyProductAttribute("AspNetIdentityLab")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AspNetIdentityLab")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
